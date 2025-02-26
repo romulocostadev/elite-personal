@@ -25,7 +25,7 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setShowModal(true);
     setEmail("");
@@ -57,7 +57,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#111111]">
+    <div className="min-h-screen w-full bg-[#111111] overflow-x-hidden">
       <Head>
         <title>RN Personal Trainer | Programas de Treino Personalizados</title>
         <meta
@@ -193,7 +193,7 @@ export default function Home() {
       </motion.nav>
 
       {/* Hero Section com gradiente moderno e formas fluidas */}
-      <section className="pt-32 pb-20 overflow-hidden relative">
+      <section className="relative min-h-screen pt-32 pb-20 overflow-hidden">
         {/* Formas SVG decorativas */}
         <div className="absolute top-0 right-0 w-1/3 h-full opacity-40 pointer-events-none">
           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -215,7 +215,7 @@ export default function Home() {
         </div>
 
         {/* Conteúdo da seção hero */}
-        <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center relative z-10">
+        <div className="container mx-auto px-4 md:px-6 lg:px-12 flex flex-col md:flex-row items-center relative z-10">
           <div className="md:w-1/2 mb-12 md:mb-0">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -880,7 +880,7 @@ export default function Home() {
       </section>
 
       {/* Rodapé */}
-      <footer className="bg-black text-white py-12">
+      <footer className="bg-black text-white py-12 pb-16">
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
