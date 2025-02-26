@@ -9,7 +9,6 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeTab, setActiveTab] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Controla o efeito de navbar ao scroll
@@ -735,7 +734,7 @@ export default function Home() {
                     <p className="text-white text-sm">{testimonial.role}</p>
                   </div>
                 </div>
-                <p className="text-white">"{testimonial.content}"</p>
+                <p className="text-white">{testimonial.content}</p>
               </motion.div>
             ))}
           </div>
